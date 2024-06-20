@@ -1,38 +1,4 @@
 import React, { useRef, useState } from "react";
-import {
-  Row,
-  Col,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  Container,
-  NavbarBrand,
-  Navbar,
-  Nav,
-  NavItem,
-  NavLink,
-  NavbarToggler,
-  Collapse,
-  Card,
-  CardBody,
-  Form,
-  FormGroup,
-  Input,
-  Button,
-} from "reactstrap";
-import { Carousel, Image, Stack } from "react-bootstrap";
-import c1 from "../assets/images/portfolio/c1.jpg";
-import c2 from "../assets/images/portfolio/c2.jpg";
-import c33 from "../assets/images/portfolio/c33.jpg";
-import c44 from "../assets/images/portfolio/c44.jpg";
-import c55 from "../assets/images/portfolio/c55.jpg";
-import c67 from "../assets/images/portfolio/c67.jpg";
-import img1 from "../assets/images/testimonial/1.jpg";
-import img2 from "../assets/images/testimonial/2.jpg";
-import img3 from "../assets/images/testimonial/3.jpg";
-import about from "../assets/images/portfolio/about.png";
-
 import { Link, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -42,6 +8,26 @@ import {
   faLinkedinIn,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+import Carousel from "react-bootstrap/Carousel";
+import Image from "react-bootstrap/Image";
+import Stack from "react-bootstrap/Stack";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
+import NavItem from "react-bootstrap/NavItem";
+import NavLink from "react-bootstrap/NavLink";
+import NavbarToggler from "react-bootstrap/NavbarToggle";
+import Collapse from "react-bootstrap/Collapse";
+import Card from "react-bootstrap/Card";
+import CardBody from "react-bootstrap/CardBody";
+import Form from "react-bootstrap/Form";
+import FormGroup from "react-bootstrap/FormGroup";
+//import Input from "react-bootstrap/Input";
+import Button from "react-bootstrap/Button";
+import { NavbarBrand } from "react-bootstrap";
+import logo from "../assets/images/logos/pjop.png";
 
 const Videos: React.FC = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -93,15 +79,16 @@ const Videos: React.FC = () => {
           <Navbar className="navbar-expand-lg h1-nav">
             <NavbarBrand href="/">
               <Image
-                src={require("../assets/images/logos/pjop.png")}
+                src={logo}
                 className="custom-logo"
               ></Image>
             </NavbarBrand>
 
-            <NavbarToggler>
+            <NavbarToggler onClick={toggle}>
               <span className="ti-menu"></span>
             </NavbarToggler>
-            <Collapse navbar id="header1">
+            <Navbar id="header1">
+            <Collapse in={isOpen} >
               <Nav navbar className="ms-auto mt-2 mt-lg-0">
                 <NavItem className="active">
                   <NavLink href="/" style={{ color: "green" }}>
@@ -144,13 +131,14 @@ const Videos: React.FC = () => {
                 </NavItem>
               </Nav>
             </Collapse>
+            </Navbar>
           </Navbar>
         </Container>
 
         <div className="title-holder courses" style={{ padding: "100px 0" }}>
           <h1 className="text-center">
             <b>Videos</b>
-            <hr
+           <hr
               style={{
                 borderTop: "5px solid green",
                 width: "10%",

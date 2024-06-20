@@ -1,15 +1,15 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import logo from "../../assets/images/blog/blog-home/img2.jpg"
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
+import logo from "../../../public/assets/images/blog/blog-home/img2.jpg";
 
-export const  AppNavbar = () => {
+export const AppNavbar = () => {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
         <Navbar.Brand href="#home">
-          <img src={logo} alt='hi' />
+          <img src={logo} alt="hi" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
@@ -32,4 +32,4 @@ export const  AppNavbar = () => {
       </Container>
     </Navbar>
   );
-}
+};

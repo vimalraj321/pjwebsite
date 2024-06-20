@@ -1,30 +1,28 @@
 import React from "react";
 import {
-  AccordionBody,
-  AccordionHeader,
+  Accordion,
   AccordionItem,
+  AccordionButton,
+  AccordionCollapse,
   Button,
   Card,
   CardBody,
   Col,
-  Collapse,
   Container,
+  Dropdown,
   DropdownItem,
   DropdownMenu,
   DropdownToggle,
   Form,
   FormGroup,
-  Input,
   Nav,
   NavItem,
   NavLink,
   Navbar,
   NavbarBrand,
-  NavbarToggler,
+  NavbarToggle,
   Row,
-  UncontrolledAccordion,
-  UncontrolledDropdown,
-} from "reactstrap";
+} from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { Image } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -33,6 +31,16 @@ import {
   faInstagram,
   faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
+import logo from "../assets/images/logos/pjop.png";
+import portfolio from "../assets/images/portfolio/msoffice1.jpg";
+import portfolio2 from "../assets/images/portfolio/photoshop.jpg";
+import portfolio3 from "../assets/images/portfolio/coreldraw.jpg";
+import portfolio4 from "../assets/images/portfolio/tallyprime.png";
+import portfolio5 from "../assets/images/portfolio/maths.jpg";
+import portfolio6 from "../assets/images/portfolio/english.jpg";
+import portfolio7 from "../assets/images/portfolio/hindi (1).jpg";
+import portfolio8 from "../assets/images/portfolio/cbse tuition.jpg";
+import portfolio9 from "../assets/images/portfolio/tnscert.jpg";
 
 const Training: React.FC = () => {
   return (
@@ -66,15 +74,15 @@ const Training: React.FC = () => {
           <Navbar className="navbar-expand-lg h1-nav">
             <NavbarBrand href="/">
               <Image
-                src={require("../assets/images/logos/pjop.png")}
+                src={logo}
                 className="custom-logo"
               />
             </NavbarBrand>
 
-            <NavbarToggler>
+            <NavbarToggle>
               <span className="ti-menu"></span>
-            </NavbarToggler>
-            <Collapse navbar id="header1">
+            </NavbarToggle>
+            <Navbar.Collapse id="header1">
               <Nav navbar className="ms-auto mt-2 mt-lg-0">
                 <NavItem className="active">
                   <NavLink href="/" style={{ color: "green" }}>
@@ -116,7 +124,7 @@ const Training: React.FC = () => {
                   </Button>
                 </NavItem>
               </Nav>
-            </Collapse>
+            </Navbar.Collapse>
           </Navbar>
         </Container>
 
@@ -150,13 +158,13 @@ const Training: React.FC = () => {
                 <div className="text-center mt-5">
                   <Link to="/dca">
                     <Image
-                      src={require("../assets/images/portfolio/msoffice1.jpg")}
+                      src={portfolio}
                       className="msoffice"
                       alt="ms"
                     />
                   </Link>
                 </div>
-                <CardBody>
+                <Card.Body>
                   <h5 className="font-medium m-b-0 text-center mt-2">
                     <b>MS OFFICE TRAINING</b>
                   </h5>
@@ -164,7 +172,7 @@ const Training: React.FC = () => {
                   <p className="m-b-0 font-14 text-center">
                     <h5>Rs.3000</h5>
                   </p>
-                </CardBody>
+                </Card.Body>
               </Card>
             </Col>
             <Col md="3">
@@ -172,13 +180,13 @@ const Training: React.FC = () => {
                 <div className="text-center mt-5">
                   <Link to="/dca">
                     <Image
-                      src={require("../assets/images/portfolio/photoshop.jpg")}
+                      src={portfolio2}
                       className="msoffice"
                       alt="ms"
                     />
                   </Link>
                 </div>
-                <CardBody>
+                <Card.Body>
                   <h5 className="font-medium m-b-0 text-center mt-2">
                     <b>PHOTOSHOP</b>
                   </h5>
@@ -186,7 +194,7 @@ const Training: React.FC = () => {
                   <p className="m-b-0 font-14 text-center">
                     <h5>Rs.2000</h5>
                   </p>
-                </CardBody>
+                </Card.Body>
               </Card>
             </Col>
             <Col md="3">
@@ -194,13 +202,13 @@ const Training: React.FC = () => {
                 <div className="text-center mt-5">
                   <Link to="/dca">
                     <Image
-                      src={require("../assets/images/portfolio/coreldraw.jpg")}
+                      src={portfolio3}
                       className="msoffice"
                       alt="ms"
                     />
                   </Link>
                 </div>
-                <CardBody>
+                <Card.Body>
                   <h5 className="font-medium m-b-0 text-center mt-2">
                     <b>CORELDRAW</b>
                   </h5>
@@ -208,7 +216,7 @@ const Training: React.FC = () => {
                   <p className="m-b-0 font-14 text-center">
                     <h5>Rs.1500</h5>
                   </p>
-                </CardBody>
+                </Card.Body>
               </Card>
             </Col>
             <Col md="3">
@@ -216,13 +224,13 @@ const Training: React.FC = () => {
                 <div className="text-center mt-5">
                   <Link to="/dca">
                     <Image
-                      src={require("../assets/images/portfolio/tallyprime.png")}
+                      src={portfolio4}
                       className="msoffice"
                       alt="ms"
                     />
                   </Link>
                 </div>
-                <CardBody>
+                <Card.Body>
                   <h5 className="font-medium m-b-0 text-center mt-2">
                     <b>TALLY PRIME</b>
                   </h5>
@@ -230,7 +238,7 @@ const Training: React.FC = () => {
                   <p className="m-b-0 font-14 text-center">
                     <h5>Rs.4000</h5>
                   </p>
-                </CardBody>
+                </Card.Body>
               </Card>
             </Col>
             <Col md="3">
@@ -238,13 +246,13 @@ const Training: React.FC = () => {
                 <div className="text-center mt-5">
                   <Link to="/dca">
                     <Image
-                      src={require("../assets/images/portfolio/maths.jpg")}
+                      src={portfolio5}
                       className="msoffice"
                       alt="ms"
                     />
                   </Link>
                 </div>
-                <CardBody>
+                <Card.Body>
                   <h5 className="font-medium m-b-0 text-center mt-2">
                     <b>MATHEMATICS</b>
                   </h5>
@@ -252,7 +260,7 @@ const Training: React.FC = () => {
                   <p className="m-b-0 font-14 text-center">
                     <h5>Rs.500</h5>
                   </p>
-                </CardBody>
+                </Card.Body>
               </Card>
             </Col>
             <Col md="3">
@@ -260,13 +268,13 @@ const Training: React.FC = () => {
                 <div className="text-center mt-5">
                   <Link to="/dca">
                     <Image
-                      src={require("../assets/images/portfolio/english.jpg")}
+                      src={portfolio6}
                       className="msoffice"
                       alt="ms"
                     />
                   </Link>
                 </div>
-                <CardBody>
+                <Card.Body>
                   <h5 className="font-medium m-b-0 text-center mt-2">
                     <b>SPOKEN ENGLISH</b>
                   </h5>
@@ -274,7 +282,7 @@ const Training: React.FC = () => {
                   <p className="m-b-0 font-14 text-center">
                     <h5>Rs.500</h5>
                   </p>
-                </CardBody>
+                </Card.Body>
               </Card>
             </Col>
             <Col md="3">
@@ -282,13 +290,13 @@ const Training: React.FC = () => {
                 <div className="text-center mt-5">
                   <Link to="/dca">
                     <Image
-                      src={require("../assets/images/portfolio/hindi (1).jpg")}
+                      src={portfolio7}
                       className="msoffice"
                       alt="ms"
                     />
                   </Link>
                 </div>
-                <CardBody>
+                <Card.Body>
                   <h5 className="font-medium m-b-0 text-center mt-2">
                     <b>SPOKEN HINDI</b>
                   </h5>
@@ -296,7 +304,7 @@ const Training: React.FC = () => {
                   <p className="m-b-0 font-14 text-center">
                     <h5>Rs.500</h5>
                   </p>
-                </CardBody>
+                </Card.Body>
               </Card>
             </Col>
             <Col md="3">
@@ -304,13 +312,13 @@ const Training: React.FC = () => {
                 <div className="text-center mt-5">
                   <Link to="/dca">
                     <Image
-                      src={require("../assets/images/portfolio/cbse tuition.jpg")}
+                      src={portfolio8}
                       className="msoffice"
                       alt="ms"
                     />
                   </Link>
                 </div>
-                <CardBody>
+                <Card.Body>
                   <h5 className="font-medium m-b-0 text-center mt-2">
                     <b>CBSE</b>
                   </h5>
@@ -318,7 +326,7 @@ const Training: React.FC = () => {
                   <p className="m-b-0 font-14 text-center">
                     <h5>Rs.500</h5>
                   </p>
-                </CardBody>
+                </Card.Body>
               </Card>
             </Col>
             <Col md="3">
@@ -326,13 +334,13 @@ const Training: React.FC = () => {
                 <div className="text-center mt-5">
                   <Link to="/dca">
                     <Image
-                      src={require("../assets/images/portfolio/tnscert.jpg")}
+                      src={portfolio9}
                       className="msoffice"
                       alt="ms"
                     />
                   </Link>
                 </div>
-                <CardBody>
+                <Card.Body>
                   <h5 className="font-medium m-b-0 text-center mt-2">
                     <b>TNSCERT</b>
                   </h5>
@@ -340,45 +348,63 @@ const Training: React.FC = () => {
                   <p className="m-b-0 font-14 text-center">
                     <h5>Rs.500</h5>
                   </p>
-                </CardBody>
+                </Card.Body>
               </Card>
             </Col>
           </Row>
         </Container>
 
         {/*Accordion */}
-        <UncontrolledAccordion defaultOpen="0">
-          <AccordionItem>
-            <AccordionHeader targetId="1">Accordion Item 1</AccordionHeader>
-            <AccordionBody accordionId="1">
-              <strong>This is the first item's accordion body.</strong> You can
-              modify any of this with custom CSS or overriding our default
-              variables. It’s also worth noting that just about any HTML can go
-              within the <code>.accordion-body</code>, though the transition
-              does limit overflow.
-            </AccordionBody>
-          </AccordionItem>
-          <AccordionItem>
-            <AccordionHeader targetId="2">Accordion Item 2</AccordionHeader>
-            <AccordionBody accordionId="2">
-              <strong>This is the second item's accordion body.</strong> You can
-              modify any of this with custom CSS or overriding our default
-              variables. It’s also worth noting that just about any HTML can go
-              within the <code>.accordion-body</code>, though the transition
-              does limit overflow.
-            </AccordionBody>
-          </AccordionItem>
-          <AccordionItem>
-            <AccordionHeader targetId="3">Accordion Item 3</AccordionHeader>
-            <AccordionBody accordionId="3">
-              <strong>This is the third item's accordion body.</strong> You can
-              modify any of this with custom CSS or overriding our default
-              variables. It’s also worth noting that just about any HTML can go
-              within the <code>.accordion-body</code>, though the transition
-              does limit overflow.
-            </AccordionBody>
-          </AccordionItem>
-        </UncontrolledAccordion>
+        <Accordion defaultActiveKey="0">
+          <Card>
+            <Card.Header>
+              <Accordion.Header as={Button} variant="link" eventKey="0">
+                Accordion Item 1
+              </Accordion.Header>
+            </Card.Header>
+            <Accordion.Collapse eventKey="0">
+              <Card.Body>
+                <strong>This is the first item's accordion body.</strong> You can
+                modify any of this with custom CSSor overriding our default
+                variables. It’s also worth noting that just about any HTML can go
+                within the <code>.accordion-body</code>, though the transition
+                does limit overflow.
+              </Card.Body>
+            </Accordion.Collapse>
+          </Card>
+          <Card>
+            <Card.Header>
+              <Accordion.Header as={Button} variant="link" eventKey="1">
+                Accordion Item 2
+              </Accordion.Header>
+            </Card.Header>
+            <Accordion.Collapse eventKey="1">
+              <Card.Body>
+                <strong>This is the second item's accordion body.</strong> You can
+                modify any of this with custom CSS or overriding our default
+                variables. It’s also worth noting that just about any HTML can go
+                within the <code>.accordion-body</code>, though the transition
+                does limit overflow.
+              </Card.Body>
+            </Accordion.Collapse>
+          </Card>
+          <Card>
+            <Card.Header>
+              <Accordion.Header as={Button} variant="link" eventKey="2">
+                Accordion Item 3
+              </Accordion.Header>
+            </Card.Header>
+            <Accordion.Collapse eventKey="2">
+              <Card.Body>
+                <strong>This is the third item's accordion body.</strong> You can
+                modify any of this with custom CSS or overriding our default
+                variables. It’s also worth noting that just about any HTML can go
+                within the <code>.accordion-body</code>, though the transition
+                does limit overflow.
+              </Card.Body>
+            </Accordion.Collapse>
+          </Card>
+        </Accordion>
 
         {/* footer */}
         <div className="footer1" style={{ padding: "30px 0 10px" }}>

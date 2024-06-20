@@ -1,16 +1,17 @@
-import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { AppNavbar } from "./components/splitup/Navbar";
 import "./App.css";
-import {Home} from "./components/Home";
-import Advanced_python from "./components/Advanced_python";
+import { Home } from "./pages/Home";
+import { Courses } from "./pages/Courses";
 
-const App: React.FC = () => {
+const App = () => {
   return (
     <>
+      <AppNavbar />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/course/:name" element={<Advanced_python />} />
+          <Route path="/courses" element={<Courses />} />
         </Routes>
       </BrowserRouter>
     </>

@@ -1,6 +1,6 @@
 import React from 'react';
-import { Container, Row, Col } from 'reactstrap';
-import { Carousel, CarouselItem } from 'reactstrap';
+import { Container, Row, Col } from 'react-bootstrap';
+import { Carousel, CarouselItem } from 'react-bootstrap';
 
 interface CarouselProps {
   children: React.ReactNode[];
@@ -21,7 +21,7 @@ const Testimonials = () => {
             <h1 className="title mb-5" style={{ fontSize: "3vw" }}>
               What Our Students Say
             </h1>
-            <Carousel interval={3000} next={next} previous={previous}>
+            <Carousel interval={3000}>
               <CarouselItem>
               <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.

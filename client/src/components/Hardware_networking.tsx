@@ -18,8 +18,12 @@ import { Image,   Accordion,
   NavLink,
   Navbar,
   NavbarBrand,
-  Row, } from "react-bootstrap";
-import { Input, NavbarToggler } from "reactstrap";
+  Row,
+  NavbarToggle,
+  FormControl
+ } from "react-bootstrap";
+  
+
 
 export default function Hardware_networking() {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,9 +37,9 @@ export default function Hardware_networking() {
             <h1>
 pjop            </h1>
           </NavbarBrand>
-          <NavbarToggler onClick={toggle}>
+          <NavbarToggle onClick={toggle}>
             <span className="ti-menu"></span>
-          </NavbarToggler>
+          </NavbarToggle>
           <Collapse >
             <Nav navbar className="ms-auto mt-2 mt-lg-0">
               <NavItem className="active">
@@ -141,17 +145,17 @@ pjop            </h1>
                         <Row>
                           <Col lg="12">
                             <FormGroup className="m-t-15">
-                              <Input type="text" placeholder="Name" />
+                              <FormControl type="text" placeholder="Name" />
                             </FormGroup>
                           </Col>
                           <Col lg="12">
                             <FormGroup className="m-t-15">
-                              <Input type="email" placeholder="Email ID" />
+                              <FormControl type="email" placeholder="Email ID" />
                             </FormGroup>
                           </Col>
                           <Col lg="12">
                             <FormGroup className="m-t-15">
-                              <Input
+                              <FormControl
                                 type="number"
                                 placeholder="Phone Number"
                               />

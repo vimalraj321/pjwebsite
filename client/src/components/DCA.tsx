@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {
   Accordion,
   AccordionBody,
@@ -15,17 +15,16 @@ import {
   DropdownToggle,
   Form,
   FormGroup,
-  Input,
+  FormControl,
   Nav,
   NavItem,
   NavLink,
   Navbar,
   NavbarBrand,
-  NavbarToggler,
+  NavbarToggle,
   Row,
-  UncontrolledAccordion,
-  UncontrolledDropdown,
-} from "reactstrap";
+  
+} from "react-bootstrap";
 import pjop from "../assets/images/logos/logo-1.png";
 import certification from "../assets/images/landingpage/certification.jpg";
 import online from "../assets/images/landingpage/online.jpg";
@@ -48,10 +47,11 @@ export default function DCA() {
           <NavbarBrand href="#">
             <img src={pjop} alt="pjop" className="custom-pjop" />
           </NavbarBrand>
-          <NavbarToggler onClick={toggle}>
+          <NavbarToggle onClick={toggle}>
             <span className="ti-menu"></span>
-          </NavbarToggler>
-          <Collapse isOpen={isOpen} navbar id="header1">
+          </NavbarToggle>
+          <Navbar id="header1">
+          <Collapse in={isOpen}>
             <Nav navbar className="ms-auto mt-2 mt-lg-0">
               <NavItem className="active">
                 <NavLink href="/" style={{ color: "green" }}>
@@ -113,6 +113,7 @@ export default function DCA() {
               </NavItem>
             </Nav>
           </Collapse>
+          </Navbar>
         </Navbar>
       </Container>
       <br />
@@ -171,17 +172,17 @@ export default function DCA() {
                         <Row>
                           <Col lg="12">
                             <FormGroup className="m-t-15">
-                              <Input type="text" placeholder="Name" />
+                              <FormControl type="text" placeholder="Name" />
                             </FormGroup>
                           </Col>
                           <Col lg="12">
                             <FormGroup className="m-t-15">
-                              <Input type="email" placeholder="Email ID" />
+                              <FormControl type="email" placeholder="Email ID" />
                             </FormGroup>
                           </Col>
                           <Col lg="12">
                             <FormGroup className="m-t-15">
-                              <Input type="number" placeholder="Phone Number" />
+                              <FormControl type="number" placeholder="Phone Number" />
                             </FormGroup>
                           </Col>
                           <Col lg="12">
@@ -342,13 +343,13 @@ export default function DCA() {
           <br />
           <Row>
             <Col md={8}>
-            <UncontrolledAccordion defaultOpen="0">
-              <AccordionItem className="Accord1 ms-5">
-                <AccordionHeader targetId="1" className="">
+            <Accordion defaultActiveKey="0">
+              <Accordion.Item eventKey="0" className="Accord1 ms-5">
+                <Accordion.Header>
                   <FaPlay className="Play" style={{ marginRight: "10px" }} />
                   Begineer Module
-                </AccordionHeader>
-                <AccordionBody accordionId="1">
+                </Accordion.Header>
+                <AccordionBody>
                   <li>Characteristics of Computer</li>
                   <li>Computer System</li>
                   <li>Central Processing Unit</li>
@@ -357,48 +358,48 @@ export default function DCA() {
                   <li>Multimedia and Applications</li>
                   <li>Computer Software and Hardware</li>
                 </AccordionBody>
-              </AccordionItem>
-              <AccordionItem className="Accord2 ms-5">
-                <AccordionHeader targetId="2" className="">
+              </Accordion.Item>
+              <Accordion.Item eventKey="0" className="Accord2 ms-5">
+                <Accordion.Header >
                   <FaPlay className="Play" style={{ marginRight: "10px" }} />
                   Intermediate Module
-                </AccordionHeader>
-                <AccordionBody accordionId="2">
+                </Accordion.Header>
+                <Accordion.Body>
                  <li>DTP work</li>
                  <li>Spreadsheet Package</li>
                  <li>Workbook</li>
                  <li>Worksheets</li>
                  <li>Web PagesPresentations</li>
                  <li>Basic Animation</li>
-                </AccordionBody>
-              </AccordionItem>
-              <AccordionItem className="Accord3 ms-5">
-                <AccordionHeader targetId="3" className="">
+                </Accordion.Body>
+              </Accordion.Item>
+              <Accordion.Item eventKey="0" className="Accord3 ms-5">
+                <Accordion.Header>
                   <FaPlay className="Play" style={{ marginRight: "10px" }} />
                   Advanced Module
-                </AccordionHeader>
-                <AccordionBody accordionId="3">
+                </Accordion.Header>
+                <Accordion.Body>
                  <li>Adobe Suite</li>
                  <li>File Formats</li>
                  <li>Multimedia Components</li>
                  <li>Compression</li>
                  <li>Sharing of Multimedia</li>
-                </AccordionBody>
-              </AccordionItem>
-              <AccordionItem className="Accord4 ms-5">
-                <AccordionHeader targetId="3" className="">
+                </Accordion.Body>
+              </Accordion.Item>
+              <Accordion.Item eventKey="0" className="Accord4 ms-5">
+                <Accordion.Header>
                   <FaPlay className="Play" style={{ marginRight: "10px" }} />
                   Expert Module
-                </AccordionHeader>
-                <AccordionBody accordionId="3">
+                </Accordion.Header>
+                <Accordion.Body>
                  <li>C</li>
                  <li>C++</li>
                  <li>Java</li>
                  <li>Python</li>
                  <li>SQL</li>
-                </AccordionBody>
-              </AccordionItem>
-            </UncontrolledAccordion>
+                </Accordion.Body>
+              </Accordion.Item>
+            </Accordion>
             </Col>
           </Row>
         </Container>

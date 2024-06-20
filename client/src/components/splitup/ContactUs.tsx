@@ -1,9 +1,9 @@
-import React, { useRef } from 'react';
-import { Container, Row, Col } from 'reactstrap';
-import { Form, FormGroup, Input, Label } from 'reactstrap';
-
+import React, { useRef } from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import { Form, FormGroup, FormControl } from "react-bootstrap";
+import contact from "../../../public/assets/images/contact/contact.jpg";
 const ContactUs = () => {
-    const contactRef = useRef<HTMLDivElement>(null);
+  const contactRef = useRef<HTMLDivElement>(null);
   return (
     <div ref={contactRef} className="contact-us">
       <Container>
@@ -12,15 +12,10 @@ const ContactUs = () => {
             <h1 className="title mb-5" style={{ fontSize: "3vw" }}>
               Contact Us
             </h1>
-            <Form>
-              {/* form fields */}
-            </Form>
+            <Form>{/* form fields */}</Form>
           </Col>
           <Col lg="6" md="6" className="text-center">
-            <img
-              src={require("../assets/images/contactus.jpg")}
-              alt="Contact Us"
-            />
+            <img src={contact} alt="Contact Us" />
           </Col>
         </Row>
       </Container>

@@ -1,26 +1,15 @@
 import React from "react";
 import { Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import {
-  Button,
-  Card,
-  CardBody,
-  Carousel,
-  Col,
-  Container,
-  Form,
-  FormGroup,
-  Input,
-  Row,
-} from "reactstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function Header(): JSX.Element {
   return (
     <>
       <div className="static-slider-head banner2">
-        <Container>
-          <Row className="justify-content-center">
-            <Col lg="8" md="6" className="align-self-center text-center">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-lg-8 col-md-6 align-self-center text-center">
               <h1 className="title" style={{ fontSize: "6vw" }}>
                 PJOP Computers
               </h1>
@@ -34,36 +23,36 @@ export default function Header(): JSX.Element {
                 {" "}
                 <b>Get Started</b>
               </a>
-            </Col>
-            <Col lg="4" md="6" className="text-center">
-              <Card className="card-shadow">
-                <CardBody>
+            </div>
+            <div className="col-lg-4 col-md-6 text-center">
+              <div className="card card-shadow">
+                <div className="card-body">
                   <h4 className="font-weight-bold text-decoration">
                     <b>GET THIS COURSE</b>
                   </h4>
-                  <Form>
-                    <Row>
-                      <Col lg="6">
-                        <FormGroup className="m-t-15">
-                          <Input type="text" placeholder="First Name" />
-                        </FormGroup>
-                      </Col>
-                      <Col lg="6">
-                        <FormGroup className="m-t-15">
-                          <Input type="text" placeholder="Last Name" />
-                        </FormGroup>
-                      </Col>
-                      <Col lg="12">
-                        <FormGroup className="m-t-15">
-                          <Input type="email" placeholder="Email" />
-                        </FormGroup>
-                      </Col>
-                      <Col lg="12">
-                        <FormGroup className="m-t-15">
-                          <Input type="number" placeholder="Phone Number" />
-                        </FormGroup>
-                      </Col>
-                      <Col lg="12">
+                  <form>
+                    <div className="row">
+                      <div className="col-lg-6">
+                        <div className="form-group m-t-15">
+                          <input type="text" placeholder="First Name" />
+                        </div>
+                      </div>
+                      <div className="col-lg-6">
+                        <div className="form-group m-t-15">
+                          <input type="text" placeholder="Last Name" />
+                        </div>
+                      </div>
+                      <div className="col-lg-12">
+                        <div className="form-group m-t-15">
+                          <input type="email" placeholder="Email" />
+                        </div>
+                      </div>
+                      <div className="col-lg-12">
+                        <div className="form-group m-t-15">
+                          <input type="number" placeholder="Phone Number" />
+                        </div>
+                      </div>
+                      <div className="col-lg-12">
                         <p>
                           By submitting, you agree to the{" "}
                           <span className="text-primary">
@@ -74,9 +63,9 @@ export default function Header(): JSX.Element {
                           and to receive communications about this and other
                           courses.
                         </p>
-                      </Col>
-                      <Col lg="12">
-                        <Button
+                      </div>
+                      <div className="col-lg-12">
+                        <button
                           type="button"
                           className="btn btn-success-gradiant m-t-10 btn-arrow"
                         >
@@ -84,30 +73,33 @@ export default function Header(): JSX.Element {
                             {" "}
                             Enroll Now <i className="ti-arrow-right"></i>
                           </span>
-                        </Button>
-                      </Col>
+                        </button>
+                      </div>
 
-                      <Col lg="12">
+                      <div className="col-lg-12">
                         <hr />
-                      </Col>
-                      <Col lg="6">
-                        <Button type="button" className="btn btn-primary w-100">
+                      </div>
+                      <div className="col-lg-6">
+                        <button type="button" className="btn btn-primary w-100">
                           <i className="fa fa-phone" /> Contact
-                        </Button>
-                      </Col>
-                      <Col lg="6">
-                        <Button type="button" className="btn btn-success w-100">
+                        </button>
+                      </div>
+                      <div className="col-lg-6">
+                        <button type="button" className="btn btn-success w-100">
                           <i className="fa fa-whatsapp" /> whatsapp
-                        </Button>
-                      </Col>
-                    </Row>
-                  </Form>
-                </CardBody>
-              </Card>
-            </Col>
-          </Row>
-        </Container>
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+    </>
+  );
+}
 
       {/* <Carousel>
         <Carousel.Item>
@@ -140,8 +132,7 @@ export default function Header(): JSX.Element {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel> */}
-    </>
-  );
-}
+    
+  
 
 

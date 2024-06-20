@@ -1,31 +1,26 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import {
   Accordion,
-  AccordionBody,
-  AccordionHeader,
-  AccordionItem,
+
   Button,
   Card,
   CardBody,
   Col,
   Collapse,
   Container,
-  DropdownItem,
-  DropdownMenu,
-  DropdownToggle,
+
   Form,
   FormGroup,
-  Input,
+  FormControl,
   Nav,
   NavItem,
   NavLink,
   Navbar,
   NavbarBrand,
-  NavbarToggler,
+  NavbarToggle,
   Row,
-  UncontrolledAccordion,
-  UncontrolledDropdown,
-} from "reactstrap";
+
+} from "react-bootstrap";
 import pjop from "../assets/images/logos/logo-1.png";
 import certification from "../assets/images/landingpage/certification.jpg";
 import online from "../assets/images/landingpage/online.jpg";
@@ -35,7 +30,9 @@ import support from "../assets/images/landingpage/support.jpg";
 import refund from "../assets/images/landingpage/refund.jpg";
 import { FaPlay } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { Image } from "react-bootstrap";
+
+import "bootstrap/dist/css/bootstrap.min.css";
+
 
 export default function Desktop() {
   const [isOpen, setIsOpen] = useState(false);
@@ -48,10 +45,11 @@ export default function Desktop() {
           <NavbarBrand href="#">
             <img src={pjop} alt="pjop" className="custom-pjop" />
           </NavbarBrand>
-          <NavbarToggler onClick={toggle}>
+          <NavbarToggle onClick={toggle}>
             <span className="ti-menu"></span>
-          </NavbarToggler>
-          <Collapse isOpen={isOpen} navbar id="header1">
+          </NavbarToggle>
+          <Navbar id="header1">
+          <Collapse in={isOpen}>
             <Nav navbar className="ms-auto mt-2 mt-lg-0">
               <NavItem className="active">
                 <NavLink href="#" style={{ color: "green" }}>
@@ -113,6 +111,7 @@ export default function Desktop() {
               </NavItem>
             </Nav>
           </Collapse>
+          </Navbar>
         </Navbar>
       </Container>
       <br />
@@ -171,17 +170,17 @@ export default function Desktop() {
                         <Row>
                           <Col lg="12">
                             <FormGroup className="m-t-15">
-                              <Input type="text" placeholder="Name" />
+                              <FormControl type="text" placeholder="Name" />
                             </FormGroup>
                           </Col>
                           <Col lg="12">
                             <FormGroup className="m-t-15">
-                              <Input type="email" placeholder="Email ID" />
+                              <FormControl type="email" placeholder="Email ID" />
                             </FormGroup>
                           </Col>
                           <Col lg="12">
                             <FormGroup className="m-t-15">
-                              <Input type="number" placeholder="Phone Number" />
+                              <FormControl type="number" placeholder="Phone Number" />
                             </FormGroup>
                           </Col>
                           <Col lg="12">
@@ -343,60 +342,64 @@ export default function Desktop() {
           <br />
           <Row>
             <Col md={8}>
-            <UncontrolledAccordion defaultOpen="0">
-              <AccordionItem className="Accord1 ms-5">
-                <AccordionHeader targetId="1" className="">
-                  <FaPlay className="Play" style={{ marginRight: "10px" }} />
-                  Begineer Module
-                </AccordionHeader>
-                <AccordionBody accordionId="1">
-                  <strong>This is the first item's accordion body.</strong>
-                  You can modify any of this with custom CSS or overriding our
-                  default variables. It's also worth noting that just about any
-                  HTML can go within the <code>.accordion-body</code>, though
-                  the transition does limit overflow.
-                </AccordionBody>
-              </AccordionItem>
-              <AccordionItem className="Accord2 ms-5">
-                <AccordionHeader targetId="2" className="">
-                  <FaPlay className="Play" style={{ marginRight: "10px" }} />
-                  Intermediate Module
-                </AccordionHeader>
-                <AccordionBody accordionId="2">
-                  <strong>This is the second item's accordion body.</strong>
-                  You can modify any of this with custom CSS or overriding our
-                  default variables. It's also worth noting that just about any
-                  HTML can go within the <code>.accordion-body</code>, though
-                  the transition does limit overflow.
-                </AccordionBody>
-              </AccordionItem>
-              <AccordionItem className="Accord3 ms-5">
-                <AccordionHeader targetId="3" className="">
-                  <FaPlay className="Play" style={{ marginRight: "10px" }} />
-                  Advanced Module
-                </AccordionHeader>
-                <AccordionBody accordionId="3">
-                  <strong>This is the third item's accordion body.</strong>
-                  You can modify any of this with custom CSS or overriding our
-                  default variables. It's also worth noting that just about any
-                  HTML can go within the <code>.accordion-body</code>, though
-                  the transition does limit overflow.
-                </AccordionBody>
-              </AccordionItem>
-              <AccordionItem className="Accord4 ms-5">
-                <AccordionHeader targetId="3" className="">
-                  <FaPlay className="Play" style={{ marginRight: "10px" }} />
-                  Expert Module
-                </AccordionHeader>
-                <AccordionBody accordionId="3">
-                  <strong>This is the third item's accordion body.</strong>
-                  You can modify any of this with custom CSS or overriding our
-                  default variables. It's also worth noting that just about any
-                  HTML can go within the <code>.accordion-body</code>, though
-                  the transition does limit overflow.
-                </AccordionBody>
-              </AccordionItem>
-            </UncontrolledAccordion>
+            
+            <Accordion defaultActiveKey="0" className="ms-5">
+            <Accordion.Item eventKey="0" className="Accord1">
+              <Accordion.Header>
+                <FaPlay className="Play" style={{ marginRight: "10px" }} />
+                Beginner Module
+              </Accordion.Header>
+              <Accordion.Body>
+                <strong>This is the first item's accordion body.</strong>
+                You can modify any of this with custom CSS or overriding our
+                default variables. It's also worth noting that just about any
+                HTML can go within the <code>.accordion-body</code>, though
+                the transition does limit overflow.
+              </Accordion.Body>
+            </Accordion.Item>
+
+            <Accordion.Item eventKey="1" className="Accord2">
+              <Accordion.Header>
+                <FaPlay className="Play" style={{ marginRight: "10px" }} />
+                Intermediate Module
+              </Accordion.Header>
+              <Accordion.Body>
+                <strong>This is the second item's accordion body.</strong>
+                You can modify any of this with custom CSS or overriding our
+                default variables. It's also worth noting that just about any
+                HTML can go within the <code>.accordion-body</code>, though
+                the transition does limit overflow.
+              </Accordion.Body>
+            </Accordion.Item>
+
+            <Accordion.Item eventKey="2" className="Accord3">
+              <Accordion.Header>
+                <FaPlay className="Play" style={{ marginRight: "10px" }} />
+                Advanced Module
+              </Accordion.Header>
+              <Accordion.Body>
+                <strong>This is the third item's accordion body.</strong>
+                You can modify any of this with custom CSS or overriding our
+                default variables. It's also worth noting that just about any
+                HTML can go within the <code>.accordion-body</code>, though
+                the transition does limit overflow.
+              </Accordion.Body>
+            </Accordion.Item>
+
+            <Accordion.Item eventKey="3" className="Accord4">
+              <Accordion.Header>
+                <FaPlay className="Play" style={{ marginRight: "10px" }} />
+                Expert Module
+              </Accordion.Header>
+              <Accordion.Body>
+                <strong>This is the fourth item's accordion body.</strong>
+                You can modify any of this with custom CSS or overriding our
+                default variables. It's also worth noting that just about any
+                HTML can go within the <code>.accordion-body</code>, though
+                the transition does limit overflow.
+              </Accordion.Body>
+            </Accordion.Item>
+          </Accordion>
             </Col>
           </Row>
         </Container>
