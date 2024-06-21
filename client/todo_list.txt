@@ -1,0 +1,15 @@
+* home styling 
+* course
+* /course/computers
+* /course/tution
+* footer 
+
+
+# home
+* header
+* hero section
+* about -> page
+* course -> page
+* testimonial 
+* faq 
+* footer

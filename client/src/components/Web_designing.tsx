@@ -1,30 +1,5 @@
 import React, { useState } from "react";
-import {
-  AccordionBody,
-  AccordionHeader,
-  AccordionItem,
-  Button,
-  Card,
-  CardBody,
-  Col,
-  Collapse,
-  Container,
-  DropdownItem,
-  DropdownMenu,
-  DropdownToggle,
-  Form,
-  FormGroup,
-  Input,
-  Nav,
-  NavItem,
-  NavLink,
-  Navbar,
-  NavbarBrand,
-  NavbarToggler,
-  Row,
-  UncontrolledAccordion,
-  UncontrolledDropdown,
-} from "reactstrap";
+import { Container, Row, Col, Navbar, Nav, NavItem, NavLink, Image, Button, Card, CardBody, Form, FormGroup, Collapse, NavbarToggle,FormControl, NavbarBrand, Accordion } from "react-bootstrap";
 import pjop from "../assets/images/logos/logo-1.png";
 import certification from "../assets/images/landingpage/certification.jpg";
 import online from "../assets/images/landingpage/online.jpg";
@@ -33,9 +8,8 @@ import access from "../assets/images/landingpage/access.jpg";
 import support from "../assets/images/landingpage/support.jpg";
 import refund from "../assets/images/landingpage/refund.jpg";
 import { FaPlay } from "react-icons/fa";
-import Accordion from "react-bootstrap/Accordion";
 import { Link } from "react-router-dom";
-import { Image } from "react-bootstrap";
+//import { FormControl } from 'react-bootstrap';
 
 interface WebDesigningProps {}
 
@@ -49,12 +23,14 @@ const WebDesigning: React.FC<WebDesigningProps> = () => {
       <Container>
         <Navbar className="navbar-expand-lg h1-nav">
           <NavbarBrand href="#">
-            <img src={pjop} alt="pjop" className="custom-pjop" />
+            <Image src={pjop} alt="pjop" className="custom-pjop" />
           </NavbarBrand>
-          <NavbarToggler onClick={toggle}>
+          <NavbarToggle onClick={toggle}>
             <span className="ti-menu"></span>
-          </NavbarToggler>
-          <Collapse isOpen={isOpen} navbar id="header1">
+          </NavbarToggle>
+          <Navbar id="header1">
+  
+  <Collapse in={isOpen}>
             <Nav navbar className="ms-auto mt-2 mt-lg-0">
               <NavItem className="active">
                 <NavLink href="#" style={{ color: "green" }}>
@@ -101,6 +77,7 @@ const WebDesigning: React.FC<WebDesigningProps> = () => {
               </NavItem>
             </Nav>
           </Collapse>
+          </Navbar>
         </Navbar>
       </Container>
       <br />
@@ -159,22 +136,22 @@ const WebDesigning: React.FC<WebDesigningProps> = () => {
                         <Row>
                           <Col lg="12">
                             <FormGroup className="m-t-15">
-                              <Input type="text" placeholder="Name" />
+                              <FormControl type="text" placeholder="Name" />
                             </FormGroup>
                           </Col>
                           <Col lg="12">
                             <FormGroup className="m-t-15">
-                              <Input type="email" placeholder="Email ID" />
+                              <FormControl type="email" placeholder="Email ID" />
                             </FormGroup>
                           </Col>
                           <Col lg="12">
                             <FormGroup className="m-t-15">
-                              <Input type="number" placeholder="Phone Number" />
+                              <FormControl type="number" placeholder="Phone Number" />
                             </FormGroup>
                           </Col>
                           <Col lg="12">
                             <Button
-                              type="Butt"
+                              type="button"
                               className="btn btn-success-gradiant m-t-10 btn-arrow"
                             >
                               <span>
@@ -236,7 +213,7 @@ const WebDesigning: React.FC<WebDesigningProps> = () => {
           <Row>
             <Col>
               <div className="">
-                <img src={certification} className="certification mb-4" />{" "}
+                <Image src={certification} className="certification mb-4" />{" "}
                 <b style={{ color: "black" }}>
                   Globally Recognised Certification
                 </b>
@@ -247,7 +224,7 @@ const WebDesigning: React.FC<WebDesigningProps> = () => {
             </Col>
             <Col>
               <div className="">
-                <img src={online} className="certification mb-4" />{" "}
+                <Image src={online} className="certification mb-4" />{" "}
                 <b style={{ color: "black" }}>
                   100% Online and Self-paced learning
                 </b>
@@ -260,7 +237,7 @@ const WebDesigning: React.FC<WebDesigningProps> = () => {
           <Row>
             <Col>
               <div className="">
-                <img src={fulltime} className="certification mb-4" />{" "}
+                <Image src={fulltime} className="certification mb-4" />{" "}
                 <b style={{ color: "black" }}>
                   Full lifetime access to all content
                 </b>
@@ -271,7 +248,7 @@ const WebDesigning: React.FC<WebDesigningProps> = () => {
             </Col>
             <Col>
               <div className="">
-                <img src={access} className="certification mb-4" />{" "}
+                <Image src={access} className="certification mb-4" />{" "}
                 <b style={{ color: "black" }}>
                   Access to 4 Gamified Practise Platforms
                 </b>
@@ -284,7 +261,7 @@ const WebDesigning: React.FC<WebDesigningProps> = () => {
           <Row>
             <Col>
               <div className="">
-                <img src={support} className="certification mb-4" />{" "}
+                <Image src={support} className="certification mb-4" />{" "}
                 <b style={{ color: "black" }}>
                   Dedicated Forum Support to clear all your doubts
                 </b>
@@ -295,8 +272,8 @@ const WebDesigning: React.FC<WebDesigningProps> = () => {
             </Col>
             <Col>
               <div className="">
-                <img src={refund} className="certification mb-4" />{" "}
-                <b style={{ color: "black" }}>7 Days refund policy</b>
+                <Image src={refund} className="certification mb-4" />{" "}
+                <b style={{ color: "black" }}>7 Days refundpolicy</b>
               </div>
               <div className="container4">
                 <p className="cp"></p>
@@ -321,60 +298,60 @@ const WebDesigning: React.FC<WebDesigningProps> = () => {
           <br />
           <Row>
             <Col md={8}>
-              <UncontrolledAccordion defaultOpen="0">
-                <AccordionItem className="Accord1 ms-5">
-                  <AccordionHeader targetId="1" className="">
+              <Accordion defaultActiveKey="0">
+                <Accordion.Item eventKey="0">
+                  <Accordion.Header>
                     <FaPlay className="Play" style={{ marginRight: "10px" }} />
                     Begineer Module
-                  </AccordionHeader>
-                  <AccordionBody accordionId="1">
+                  </Accordion.Header>
+                  <Accordion.Body>
                     <strong>This is the first item's accordion body.</strong>
                     You can modify any of this with custom CSS or overriding our
                     default variables. It's also worth noting that just about
                     any HTML can go within the <code>.accordion-body</code>,
                     though the transition does limit overflow.
-                  </AccordionBody>
-                </AccordionItem>
-                <AccordionItem className="Accord2 ms-5">
-                  <AccordionHeader targetId="2" className="">
+                  </Accordion.Body>
+                </Accordion.Item>
+                <Accordion.Item eventKey="1">
+                  <Accordion.Header>
                     <FaPlay className="Play" style={{ marginRight: "10px" }} />
                     Intermediate Module
-                  </AccordionHeader>
-                  <AccordionBody accordionId="2">
+                  </Accordion.Header>
+                  <Accordion.Body>
                     <strong>This is the second item's accordion body.</strong>
                     You can modify any of this with custom CSS or overriding our
                     default variables. It's also worth noting that just about
                     any HTML can go within the <code>.accordion-body</code>,
                     though the transition does limit overflow.
-                  </AccordionBody>
-                </AccordionItem>
-                <AccordionItem className="Accord3 ms-5">
-                  <AccordionHeader targetId="3" className="">
+                  </Accordion.Body>
+                </Accordion.Item>
+                <Accordion.Item eventKey="2">
+                  <Accordion.Header>
                     <FaPlay className="Play" style={{ marginRight: "10px" }} />
                     Advanced Module
-                  </AccordionHeader>
-                  <AccordionBody accordionId="3">
+                  </Accordion.Header>
+                  <Accordion.Body>
                     <strong>This is the third item's accordion body.</strong>
                     You can modify any of this with custom CSS or overriding our
                     default variables. It's also worth noting that just about
                     any HTML can go within the <code>.accordion-body</code>,
                     though the transition does limit overflow.
-                  </AccordionBody>
-                </AccordionItem>
-                <AccordionItem className="Accord4 ms-5">
-                  <AccordionHeader targetId="3" className="">
+                  </Accordion.Body>
+                </Accordion.Item>
+                <Accordion.Item eventKey="3">
+                  <Accordion.Header>
                     <FaPlay className="Play" style={{ marginRight: "10px" }} />
                     Expert Module
-                  </AccordionHeader>
-                  <AccordionBody accordionId="3">
+                  </Accordion.Header>
+                  <Accordion.Body>
                     <strong>This is the third item's accordion body.</strong>
                     You can modify any of this with custom CSS or overriding our
                     default variables. It's also worth noting that just about
                     any HTML can go within the <code>.accordion-body</code>,
                     though the transition does limit overflow.
-                  </AccordionBody>
-                </AccordionItem>
-              </UncontrolledAccordion>
+                  </Accordion.Body>
+                </Accordion.Item>
+              </Accordion>
             </Col>
           </Row>
         </Container>
@@ -422,7 +399,7 @@ const WebDesigning: React.FC<WebDesigningProps> = () => {
                 </a>
               </p>
             </Col>
-            <Col lg="3" md="6">
+            <Col lg="3"md="6">
               <h5 className="m-b-20" style={{ color: '#20c997' }}>
                 <b>Social</b>
               </h5>
@@ -472,3 +449,5 @@ const WebDesigning: React.FC<WebDesigningProps> = () => {
     </div>
   );
 };
+
+export default WebDesigning

@@ -1,4 +1,4 @@
-import { Container } from 'react-bootstrap';
+import { Container } from "react-bootstrap";
 
 const Header = () => {
   return (
@@ -13,12 +13,9 @@ const Header = () => {
         style={{ display: "flex", justifyContent: "center" }}
       >
         <ul>
-          <a href="https://www.facebook.com">
-          </a>
-          <a href="https://www.instagram.com">
-          </a>
-          <a href="https://www.linkedin.com/home">
-          </a>
+          <a href="https://www.facebook.com">fj</a>
+          <a href="https://www.instagram.com"></a>
+          <a href="https://www.linkedin.com/home"></a>
         </ul>
       </div>
     </div>

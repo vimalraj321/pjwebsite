@@ -1,26 +1,17 @@
 import React, { useState } from "react";
 import {
-  AccordionBody,
-  AccordionHeader,
-  AccordionItem,
+  Accordion,
   Button,
   Card,
-  CardBody,
-  Col,
-  Collapse,
   Container,
   Form,
-  FormGroup,
-  Input,
   Nav,
-  NavItem,
-  NavLink,
   Navbar,
   NavbarBrand,
-  NavbarToggler,
+  NavbarToggle,
   Row,
-  UncontrolledAccordion,
-} from "reactstrap";
+  Col,
+} from "react-bootstrap";
 import pjop from "../assets/images/logos/logo-1.png";
 import certification from "../assets/images/landingpage/certification.jpg";
 import online from "../assets/images/landingpage/online.jpg";
@@ -43,44 +34,44 @@ const SoftwareDevelopment: React.FC = () => {
           <NavbarBrand href="#">
             <img src={pjop} alt="pjop" className="custom-pjop" />
           </NavbarBrand>
-          <NavbarToggler onClick={toggle}>
+          <NavbarToggle onClick={toggle}>
             <span className="ti-menu"></span>
-          </NavbarToggler>
-          <Collapse isOpen={isOpen} navbar id="header1">
-            <Nav navbar className="ms-auto mt-2 mt-lg-0">
-              <NavItem className="active">
-                <NavLink href="#" style={{ color: "green" }}>
+          </NavbarToggle>
+          <Accordion.Collapse eventKey="0" id="header1" in={isOpen}>
+            <Nav className="ms-auto mt-2 mt-lg-0">
+              <Nav.Item className="active">
+                <Nav.Link href="#" style={{ color: "green" }}>
                   <Link to="/">
                     <b style={{ color: "green" }}>Home</b>
                   </Link>
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="#" style={{ color: "green" }}>
+                </Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link href="#" style={{ color: "green" }}>
                   <b>About</b>
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="#" style={{ color: "green" }}>
+                </Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link href="#" style={{ color: "green" }}>
                   <b>Courses</b>
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/" style={{ color: "green" }}>
+                </Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link href="/" style={{ color: "green" }}>
                   <b>Training</b>
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/" style={{ color: "green" }}>
+                </Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link href="/" style={{ color: "green" }}>
                   <b>Videos</b>
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="#" style={{ color: "green" }}>
+                </Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link href="#" style={{ color: "green" }}>
                   <b>Contact</b>
-                </NavLink>
-              </NavItem>
-              <NavItem>
+                </Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
                 <Button
                   type="button"
                   className="btn btn-success w-100"
@@ -90,9 +81,9 @@ const SoftwareDevelopment: React.FC = () => {
                 >
                   <i className="fa fa-phone" /> <b>Call us</b>
                 </Button>
-              </NavItem>
+              </Nav.Item>
             </Nav>
-          </Collapse>
+          </Accordion.Collapse>
         </Navbar>
       </Container>
       <br />
@@ -136,33 +127,33 @@ const SoftwareDevelopment: React.FC = () => {
                     <span className="saved-amount">
                       <b>201</b>
                     </span>
-                    !
+                   !
                   </p>
                 </div>
               </Col>
               <Col lg="4" md="6" className="text-center">
                 <div className="cards">
-                  <Card className="card-shadow shadow position-fixed me-5">
-                    <CardBody>
+                  <Card className="card-shadow shadowposition-fixed me-5">
+                    <Card.Body>
                       <h4 className="font-weight-bold text-decoration">
                         <b>GET THIS COURSE @₹1499</b>
                       </h4>
                       <Form>
                         <Row>
                           <Col lg="12">
-                            <FormGroup className="m-t-15">
-                              <Input type="text" placeholder="Name" />
-                            </FormGroup>
+                            <Form.Group className="m-t-15">
+                              <Form.Control type="text" placeholder="Name" />
+                            </Form.Group>
                           </Col>
                           <Col lg="12">
-                            <FormGroup className="m-t-15">
-                              <Input type="email" placeholder="Email ID" />
-                            </FormGroup>
+                            <Form.Group className="m-t-15">
+                              <Form.Control type="email" placeholder="Email ID" />
+                            </Form.Group>
                           </Col>
                           <Col lg="12">
-                            <FormGroup className="m-t-15">
-                              <Input type="number" placeholder="Phone Number" />
-                            </FormGroup>
+                            <Form.Group className="m-t-15">
+                              <Form.Control type="number" placeholder="Phone Number" />
+                            </Form.Group>
                           </Col>
                           <Col lg="12">
                             <Button
@@ -176,7 +167,7 @@ const SoftwareDevelopment: React.FC = () => {
                           </Col>
                         </Row>
                       </Form>
-                    </CardBody>
+                    </Card.Body>
                   </Card>
                 </div>
               </Col>
@@ -285,7 +276,7 @@ const SoftwareDevelopment: React.FC = () => {
             </Col>
             <Col>
               <div className="">
-                <img src={refund} className="certification mb-4" />{" "}
+                <img src={refund} className="certification mb-4" />{""}
                 <b style={{ color: "black" }}>7 days refund policy</b>
               </div>
               <div className="container6">
@@ -310,14 +301,12 @@ const SoftwareDevelopment: React.FC = () => {
               </p>
             </Col>
           </Row>
-          <UncontrolledAccordion defaultOpen="1">
-            <AccordionItem>
-              <AccordionHeader targetId="1">
-                <b>
-                  How do I enroll for the Software Development course?
-                </b>
-              </AccordionHeader>
-              <AccordionBody accordionId="1">
+          <Accordion defaultActiveKey="0">
+            <Accordion.Item eventKey="0">
+              <Accordion.Header>
+                <b>How do I enroll for the Software Development course?</b>
+              </Accordion.Header>
+              <Accordion.Body>
                 <b>
                   To enroll in our Software Development course, you need to first
                   visit the PJOP Computers website. Next, browse through our
@@ -328,13 +317,13 @@ const SoftwareDevelopment: React.FC = () => {
                   details. Use these details to access your course materials and
                   start learning immediately.
                 </b>
-              </AccordionBody>
-            </AccordionItem>
-            <AccordionItem>
-              <AccordionHeader targetId="2">
+              </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey="1">
+              <Accordion.Header>
                 <b>Can I access the course materials anytime?</b>
-              </AccordionHeader>
-              <AccordionBody accordionId="2">
+              </Accordion.Header>
+              <Accordion.Body>
                 <b>
                   Yes, once you enroll in our Software Development course, you
                   will have full access to all course materials. The course is
@@ -342,13 +331,13 @@ const SoftwareDevelopment: React.FC = () => {
                   convenience. You can access the materials anytime, anywhere,
                   and revisit them as many times as you need.
                 </b>
-              </AccordionBody>
-            </AccordionItem>
-            <AccordionItem>
-              <AccordionHeader targetId="3">
+              </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey="2">
+              <Accordion.Header>
                 <b>Do I need any prior knowledge to enroll?</b>
-              </AccordionHeader>
-              <AccordionBody accordionId="3">
+              </Accordion.Header>
+              <Accordion.Body>
                 <b>
                   No prior knowledge or experience is required to enroll in our
                   Software Development course. The course is designed for
@@ -357,26 +346,26 @@ const SoftwareDevelopment: React.FC = () => {
                   internet usage is recommended to make the learning process
                   smoother.
                 </b>
-              </AccordionBody>
-            </AccordionItem>
-            <AccordionItem>
-              <AccordionHeader targetId="4">
+              </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey="3">
+              <Accordion.Header>
                 <b>What if I have questions during the course?</b>
-              </AccordionHeader>
-              <AccordionBody accordionId="4">
+              </Accordion.Header>
+              <Accordion.Body>
                 <b>
                   Our dedicated support team is available 24/7 to assist you
                   with any queries or concerns you may have during the course.
                   You can reach out to us via email, phone, or live chat, and we
                   will be happy to help you.
                 </b>
-              </AccordionBody>
-            </AccordionItem>
-            <AccordionItem>
-              <AccordionHeader targetId="5">
+              </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey="4">
+              <Accordion.Header>
                 <b>Is there a refund policy?</b>
-              </AccordionHeader>
-              <AccordionBody accordionId="5">
+              </Accordion.Header>
+              <Accordion.Body>
                 <b>
                   Yes, we offer a 7-day refund policy for our Software
                   Development course. If you are not satisfied with the course
@@ -384,9 +373,9 @@ const SoftwareDevelopment: React.FC = () => {
                   refund. Please refer to our refund policy page for more
                   details.
                 </b>
-              </AccordionBody>
-            </AccordionItem>
-          </UncontrolledAccordion>
+              </Accordion.Body>
+            </Accordion.Item>
+          </Accordion>
         </Container>
       </div>
       <br />
