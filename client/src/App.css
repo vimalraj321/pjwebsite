@@ -1,1 +1,31 @@
 /* import "bootstrap/dist/css/bootstrap.min.css"; */
+.about-us-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .navbar {
+    flex:auto
+  }
+  
+  .about-us {
+    margin-top: 80px; /* adjust this value to match the height of your navbar */
+  }
+
+  .course-con{
+    margin: 80px 0; /* adjust this value to match the height of your navbar */
+    display: flex ;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+  }
+
+  .mt-10{
+    margin-top: 100px;
+  }
+
+  .object-fit{
+    width: 300px;
+    object-fit: contain;
+  }
