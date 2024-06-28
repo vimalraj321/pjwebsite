@@ -3,21 +3,28 @@ import { AppNavbar } from "./components/splitup/Navbar";
 import "./App.css";
 import { Home } from "./pages/Home";
 import { Courses } from "./pages/Courses";
-import TutorialPage from "./data/TutorialPage";
+import { Tutorial } from "./pages/Tutorial";
 import Footer from "./components/splitup/Footer";
+import { About } from "./pages/About";
+import { Tution } from "./components/courses/tutioncourse";
 
 const App = () => {
   return (
     <>
-      <AppNavbar />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/courses" element={<Courses />} />
-          <Route path="/tutorial" element={<TutorialPage />} />
-        </Routes>
-      </BrowserRouter>
-      <Footer />
+      <div className="background">
+        <AppNavbar />
+        <BrowserRouter>
+        
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/courses" element={<Courses />} />
+            <Route path="/tutorial" element={<Tutorial />} />
+            <Route path="/tution" element={<Tution/>} />
+          </Routes>
+        </BrowserRouter>
+        <Footer />
+      </div>
     </>
   );
 };

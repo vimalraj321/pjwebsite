@@ -2,7 +2,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import logo from "../../../public/assets/images/blog/blog-home/img2.jpg";
+import logo from "../../../public/assets/images/logos/pjop.png";
 
 const navLinks = [
   {
@@ -23,14 +23,14 @@ export const AppNavbar = () => {
           <img
             src={logo}
             alt="Logo"
-            width="40"
-            height="40"
+            width="300"
+            height="50"
             className="d-inline-block align-top"
           />
         </Navbar.Brand>
-        <Navbar.Toggle aria-cont />
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ml-auto">
+          <Nav>
             <Nav.Link href="/" className="nav-link text-white">
               Home
             </Nav.Link>
@@ -38,18 +38,19 @@ export const AppNavbar = () => {
             <Nav.Link href="/about" className="nav-link text-white">
               About
             </Nav.Link>
-            <span className="mx-4"></span>
-
-            <NavDropdown
-              title="Training"
-              id="basic-nav-dropdown"
-              className="nav-link text-white"
-            >
-              {navLinks.map(({ name, link }, i) => (
-                <NavDropdown.Item href={link}>{name}</NavDropdown.Item>
-              ))}
-            </NavDropdown>
           </Nav>
+          <span className="mx-4"></span>
+          <NavDropdown
+            title="Training"
+            id="basic-nav-dropdown"
+            className="nav-link text-white "
+          >
+            {navLinks.map(({ name, link }, i) => (
+              <NavDropdown.Item key={i} href={link}>
+                {name}
+              </NavDropdown.Item>
+            ))}
+          </NavDropdown>
         </Navbar.Collapse>
       </Container>
     </Navbar>

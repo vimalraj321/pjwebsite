@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+/*import React, { useRef } from "react";
 import {
   Container,
   Row,
@@ -82,6 +82,66 @@ const ContactUs = () => {
                 </div>
               </Container>
             </div>
+          </Col>
+        </Row>
+      </Container>
+    </div>
+  );
+};
+
+export default ContactUs;
+*/
+import React from "react";
+import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import './ContactPage.css';
+import contactImage from '../../../public/assets/images/article-lisa-01-1200x800.png';
+
+interface ContactPageProps {}
+
+const ContactUs: React.FC<ContactPageProps> = () => {
+  return (
+    <div className="contact-page">
+      <Container>
+        <Row className="justify-content-center text-center">
+          <Col lg={8} md={10}>
+            <h1 className="title mb-4" style={{ fontSize: "3vw", color: "#0dba4b" }}>
+              Contact Us
+            </h1>
+            <p style={{ fontSize: "1.2rem", color: "#6c757d" }}>
+              We would love to hear from you! Please fill out this form and we will get in touch with you shortly.
+            </p>
+          </Col>
+        </Row>
+        <Row className="justify-content-center">
+          <Col lg={6} md={8} className="text-start">
+            <Form>
+              <Form.Group controlId="formName" className="mb-3">
+                <Form.Label>Name</Form.Label>
+                <Form.Control type="text" placeholder="Enter your name" />
+              </Form.Group>
+
+              <Form.Group controlId="formEmail" className="mb-3">
+                <Form.Label>Email address</Form.Label>
+                <Form.Control type="email" placeholder="Enter your email" />
+              </Form.Group>
+
+              <Form.Group controlId="formPhone" className="mb-3">
+                <Form.Label>Phone Number</Form.Label>
+                <Form.Control type="tel" placeholder="Enter your phone number" />
+              </Form.Group>
+
+              <Form.Group controlId="formMessage" className="mb-3">
+                <Form.Label>Message</Form.Label>
+                <Form.Control as="textarea" rows={3} placeholder="Enter your message" />
+              </Form.Group>
+
+              <Button variant="primary" type="submit" className="mt-3" style={{ width: "100%" }}>
+                Submit
+              </Button>
+            </Form>
+          </Col>
+          <Col lg={5} md={5} className="text-center">
+            <img src={contactImage} alt="Contact Us" className="img-fluid" />
           </Col>
         </Row>
       </Container>

@@ -27,6 +27,7 @@ export const CoursesContainer = ({ data }: Props) => {
       </div>
       <div className="course-con">
         <CourseCard data={data} />
+        
       </div>
     </>
   );

@@ -13,3 +13,8 @@
 * testimonial 
 * faq 
 * footer
+
+
+--------------
+1. heading font size 
+2. remove useless images and components

@@ -1,0 +1,29 @@
+.contact-page {
+    padding: 60px 0;
+    background-color: #e2f5eb;
+  }
+  
+  .title {
+    font-weight: bold;
+    color: #343a40;
+  }
+  
+  .form-control {
+    border-radius: 0.25rem;
+  }
+  
+  .btn-primary {
+    background-color: #0dba4b;
+    border-color: #0dba4b;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0ca542;
+    border-color: #0ca542;
+  }
+  
+  .img-fluid {
+    max-width: 120%;
+    height: 80%;
+  }
+  

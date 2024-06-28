@@ -17,7 +17,7 @@ export const CourseCard = ({ data }: Props) => {
     <>
       {data.map(({ title, description, image, btnName, link, newTab }, i) => (
         <Card style={{ width: "18rem" }} key={i}>
-          <Card.Img variant="top" src={image} />
+          <Card.Img variant="top" src={image} style={{ height: "200px", objectFit:"fill" }}/>
           <Card.Body>
             <Card.Title>{title}</Card.Title>
             <Card.Text>{description}</Card.Text>
