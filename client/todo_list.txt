@@ -1,0 +1,20 @@
+* home styling 
+* course
+* /course/computers
+* /course/tution
+* footer 
+
+
+# home
+* header
+* hero section
+* about -> page
+* course -> page
+* testimonial 
+* faq 
+* footer
+
+
+--------------
+1. heading font size 
+2. remove useless images and components

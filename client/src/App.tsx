@@ -1,18 +1,30 @@
-import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { AppNavbar } from "./components/splitup/Navbar";
 import "./App.css";
-import {Home} from "./components/Home";
-import Advanced_python from "./components/Advanced_python";
+import { Home } from "./pages/Home";
+import { Courses } from "./pages/Courses";
+import { Tutorial } from "./pages/Tutorial";
+import Footer from "./components/splitup/Footer";
+import { About } from "./pages/About";
+import { Tution } from "./components/courses/tutioncourse";
 
-const App: React.FC = () => {
+const App = () => {
   return (
     <>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/course/:name" element={<Advanced_python />} />
-        </Routes>
-      </BrowserRouter>
+      <div className="background">
+        <AppNavbar />
+        <BrowserRouter>
+        
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/courses" element={<Courses />} />
+            <Route path="/tutorial" element={<Tutorial />} />
+            <Route path="/tution" element={<Tution/>} />
+          </Routes>
+        </BrowserRouter>
+        <Footer />
+      </div>
     </>
   );
 };

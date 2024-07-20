@@ -1,35 +1,58 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import logo from "../../assets/images/blog/blog-home/img2.jpg"
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
+import logo from "../../../public/assets/images/logos/pjop.png";
 
-export const  AppNavbar = () => {
+const navLinks = [
+  {
+    name: "Tutorial",
+    link: "/tutorial",
+  },
+  {
+    name: "Computer courses",
+    link: "/courses",
+  },
+];
+
+export const AppNavbar = () => {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
-      <Container>
-        <Navbar.Brand href="#home">
-          <img src={logo} alt='hi' />
+    <Navbar expand="lg" className="fixed-top navbar-dark bg-success">
+      <Container fluid>
+        <Navbar.Brand href="/" className="mr-auto">
+          <img
+            src={logo}
+            alt="Logo"
+            width="300"
+            height="50"
+            className="d-inline-block align-top"
+          />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="/py">Link</Nav.Link>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
+          <Nav>
+            <Nav.Link href="/" className="nav-link text-white">
+              Home
+            </Nav.Link>
+            <span className="mx-4"></span>
+            <Nav.Link href="/about" className="nav-link text-white">
+              About
+            </Nav.Link>
           </Nav>
+          <span className="mx-4"></span>
+          <NavDropdown
+            title="Training"
+            id="basic-nav-dropdown"
+            className="nav-link text-white "
+          >
+            {navLinks.map(({ name, link }, i) => (
+              <NavDropdown.Item key={i} href={link}>
+                {name}
+              </NavDropdown.Item>
+            ))}
+          </NavDropdown>
         </Navbar.Collapse>
       </Container>
     </Navbar>
   );
-}
+};

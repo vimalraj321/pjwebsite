@@ -1,5 +1,5 @@
 import React from 'react';
-import { Carousel, CarouselItem, CarouselCaption } from 'reactstrap';
+import { Carousel, CarouselItem, CarouselCaption } from 'react-bootstrap';
 
 interface CarouselProps {
   children: React.ReactNode[];
@@ -10,7 +10,7 @@ interface CarouselProps {
 
 const Carousels: React.FC<CarouselProps> = ({ children, interval, next, previous }) => {
   return (
-    <Carousel interval={interval} next={next} previous={previous}>
+    <Carousel interval={interval}>
       {children.map((child, index) => (
         <CarouselItem key={index}>{child}</CarouselItem>
       ))}
