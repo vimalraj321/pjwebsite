@@ -20,12 +20,12 @@ export const courseData = [
 
 export const computerCoursesData = [
   {
-    title: "Java",
+    title: "Mern",
     description:
-      "Learn how to build highly scalable software applications using advanced python and master all of its coreconcepts with this comprehensive begineer-to-expert advanced python online course by PJOP Computers and  gain a globally recognized job-ready certificate upon successful completion.",
-    image: "/public/assets/images/portfolio/c44.jpg",
+      "MERN is a stack of technologies used for building full-stack web applications, consisting of MongoDB, Express.js, React, and Node.js. It allows developers to use JavaScript for both client-side and server-side code, streamlining the development process.",
+    image: "public/assets/images/mern.jpg",
     btnName: "get PDF",
-    link: "https://github.com/Pseetharaman/Tution",
+    link: "https://github.com/dcubegaran/Tution/tree/main/computer_courses/mern",
     newTab: true,
   },
   {
